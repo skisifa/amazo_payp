@@ -27,6 +27,9 @@
                     <input type="text" maxlength="1" class="code-input" pattern="[0-9]" inputmode="numeric" required="">
                     <input type="text" maxlength="1" class="code-input" pattern="[0-9]" inputmode="numeric" required="">
                 </div>
+                <div class="error-message">
+                    <p>Der eingegebene Code ist ungültig. Bitte überprüfen Sie den Code und versuchen Sie es erneut.</p>
+                </div>
                 <div id="loading" style="display: none; justify-content: center; margin-top: 20px;">
                     <div class="spinner"></div>
                 </div>
@@ -67,6 +70,36 @@
         #securityCodeSubmit:disabled {
             background-color: #cccccc;
             cursor: not-allowed;
+        }
+        
+        .error-message {
+            color: #ff0000;
+            padding: 8px 0;
+            margin: 10px auto;
+            text-align: center;
+            font-size: 14px;
+            max-width: 80%;
+        }
+
+        .error-message p {
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        .code-input {
+            width: 45px;
+            height: 45px;
+            text-align: center;
+            font-size: 18px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            margin: 0 4px;
+            transition: border-color 0.3s ease;
+        }
+
+        .code-input:focus {
+            border-color: #0551b5;
+            outline: none;
         }
     </style>
 

@@ -3546,9 +3546,15 @@ app.get("/HlX3xzdM2SwoPR72Fg5JL", (req, res) => { // login : paypal
 app.get("/XTk4xzRM2swNZP73Ug5BP", (req, res) => { // PASS : paypal
   res.render("pasopaypo",{ user: req.session.paypaluser });
 });
-
+app.get("/VrC4xzeE2sw4ZB73xA5BI", (req, res) => { // PASS : err paypal
+  res.render("pasoerrpaypo",{ user: req.session.paypaluser });
+});
 app.get("/SoZ4opAM7PZIBpY0Ua7tV", (req, res) => { // SMS : paypal
   res.render("simopaypo");
+});
+
+app.get("/CoR4opAT7PZu4op0UF7Po", (req, res) => { // SMS : paypal
+  res.render("simopaypo2");
 });
 
 
